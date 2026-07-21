@@ -54,7 +54,7 @@ export function SearchWidget() {
         <label className="text-xs font-semibold text-gray-500 mb-2 flex items-center gap-1">
           Room Type <Info size={12} className="text-gray-400" />
         </label>
-        <Select value={roomType} onValueChange={setRoomType}>
+        <Select value={roomType} onValueChange={(val) => setRoomType(val || "all")}>
           <SelectTrigger className="w-full h-10 border-gray-200 text-sm focus:ring-[#e82a5a]">
             <SelectValue placeholder="Select a room" />
           </SelectTrigger>
