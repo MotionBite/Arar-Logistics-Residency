@@ -12,7 +12,7 @@ const PROTECTED_ROUTES = ['/dashboard']
 // Routes that require ADMIN role
 const ADMIN_ROUTES = ['/admin']
 
-export default async function middleware(req: NextRequest) {
+export default async function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl
 
   // Strip locale prefix for route matching
