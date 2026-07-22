@@ -3,6 +3,8 @@ import { prisma } from '@/lib/prisma';
 import { BookingStatus, PaymentStatus } from '@prisma/client';
 import { sendBookingConfirmation } from '@/services/email';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(req: Request) {
   try {
     const { bookingId } = await req.json();
